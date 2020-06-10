@@ -161,7 +161,7 @@ namespace QLDatBao
             try
             {
                 //goi function fn_CreateMaPDB de phát sinh so phieu dat bao
-                //thay doi
+                //thay doifdfd
                 SqlCommand cmm = new SqlCommand();
                 cmm.CommandType = CommandType.StoredProcedure;
                 cmm.CommandText = "dbo.pro_CreateMaPDB";
