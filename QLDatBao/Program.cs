@@ -9,7 +9,7 @@ namespace QLDatBao
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application. cccccc
+        /// The main entry point for the application. cccccc  nnnn
         /// </summary>
         [STAThread]
         static void Main()
