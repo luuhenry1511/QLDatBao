@@ -9,7 +9,7 @@ namespace QLDatBao
 {
     class Modules
     {
-        public static string cnnStr = "Data Source=DESKTOP-8D1I3SF\\SQLEXPRESS;Initial Catalog=QLDATBAO;Integrated Security=True";
+        public static string cnnStr = "Data Source=DESKTOP-RD7GGH3\\SQLEXPRESS;Initial Catalog=QLDATBAO;Integrated Security=True";
         public static SqlConnection cnn = new SqlConnection(cnnStr);
 
 

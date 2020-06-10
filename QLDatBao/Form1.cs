@@ -160,9 +160,16 @@ namespace QLDatBao
             dtNgayDat.Value = DateTime.Now;
             try
             {
-                SqlCommand cmm = new SqlCommand("Select dbo.fn_CreateMaPDB()",Modules.cnn);
+                //goi function fn_CreateMaPDB de phát sinh so phieu dat bao
+                //thay doi
+                SqlCommand cmm = new SqlCommand();
+                cmm.CommandType = CommandType.StoredProcedure;
+                cmm.CommandText = "dbo.pro_CreateMaPDB";
+                cmm.Parameters.Add("@MaPHNew", SqlDbType.NVarChar, 5).Direction =
+                    ParameterDirection.Output;
                 Modules.cnn.Open();
-                txtSoPhieu.Text = cmm.ExecuteScalar().ToString();
+                cmm.ExecuteScalar();
+                txtSoPhieu.Text = cmm.Parameters["@MaPHNew"].Value.ToString();
                 capNhat = true;
                 ennableButton();
             }
